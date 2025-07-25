@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "aiflow-builder-be"
+version = "0.1.0"
+description = ""
+authors = ["FrankDannie <frank.dannie@gmail.com>"]
+readme = "README.md"
+
+packages = [
+    { include = "app" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+uvicorn = "^0.22.0"
+fastapi = "^0.116.1"
+pydantic = {extras = ["email"], version = "^2.11.7"}
+python-jose = "^3.5.0"
+passlib = "^1.7.4"
+python-multipart = "^0.0.20"
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.36.0"
+
+[tool.poe.tasks]
+dev = "uvicorn app.main:app --reload"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
