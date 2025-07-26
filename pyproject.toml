@@ -17,6 +17,8 @@ pydantic = {extras = ["email"], version = "^2.11.7"}
 python-jose = "^3.5.0"
 passlib = "^1.7.4"
 python-multipart = "^0.0.20"
+sqlalchemy = "^2.0.41"
+bcrypt = "^4.3.0"
 
 [tool.poetry.group.dev.dependencies]
 poethepoet = "^0.36.0"
